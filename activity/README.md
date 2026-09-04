@@ -1,1 +1,1 @@
-### Default Page for activity folder
+### Default Page for Activity Folder
