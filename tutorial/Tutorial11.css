@@ -1,0 +1,28 @@
+/* Heading styles */
+h1 {
+outline-style: solid;
+outline-color: green;
+outline-width: 5px;
+background-color: tomato;
+width: fit-content;
+padding: 25px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Paragraph classes */
+.uppercase-text {
+text-transform: uppercase;
+}
+
+.highlight-word {
+font-weight: bold;
+color: darkblue;
+}
+
+.bordered-box {
+border-style: double;
+border-radius: 10px;
+border-color: red;
+border-width: 5px;
+padding: 15px;
+}
