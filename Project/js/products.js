@@ -379,7 +379,7 @@ id: 1,
         artist: "Daft Punk",
         genre: "Electronic",
         price: 129.00,
-        image: "images/albums/dicovery.png",
+        image: "images/albums/discovery.png",
         description: "Discovery is Daft Punk's second studio album, released in 2001. It blends French house, disco, and electronic music, featuring memorable tracks such as One More Time and Harder, Better, Faster, Stronger.",
 
         tracks: [
