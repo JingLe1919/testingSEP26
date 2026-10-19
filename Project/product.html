@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Details | OFFBEAT</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="images/website/website-icon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>OFFBEAT.</h1>
+
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="shop.html">SHOP</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="login.html">LOGIN</a>
+                <a href="cart.html">CART</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="product-details">
+
+                <!--Back To Shop-->
+                <a href="shop.html" class="back-button">
+                    &#8592; BACK TO SHOP
+                </a>
+
+                <!--Product Info-->
+                <div class="product-detail-container">
+                    <div class="product-detail-image">
+                        <img src="images/albums/am.png" alt="AM album cover by Arctic Monkeys" id="product-image"> 
+                    </div>
+
+                    <!--Album Details-->
+                    <div class="product-detail-info">
+                        <span class="product-genre" id="product-genre">
+                            ROCK
+                        </span>
+
+                        <h1 id="product-title">AM</h1>
+
+                        <p class="product-artist" id="product-artist">Arctic Monkeys</p>
+
+                        <h2 class="product-price" id="product-price">RM 119.00</h2>
+
+                        <p class="product-format">12" Vinyl LP</p>
+
+                        <!--Quantity Selector-->
+                        <div class="quantity-section">
+                            <label>Quantity</label>
+
+                            <div class="quantity-controls">
+                                <button type="button" id="decrease-qty">-</button>
+
+                                <span id="quantity">1</span>
+
+                                <button type="button" id="increase-qty">+</button>
+                            </div>
+                        </div>
+
+                        <!--Add to cart Button-->
+                        <button type="button" class="add-to-cart-btn" id="add-to-cart">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <!--Album Desc -->
+                <div class="product-description">
+                    <h2>ABOUT THIS RECORD.</h2>
+
+                    <p id="product-description">
+                        AM is the fifth studio album by Arctic Monkeys.
+                        Release in 2013, the album combines alternative rock,
+                        blues-inspired riff, and atmospheric sounds. 
+                        It features popular tracks such as Do I Wanna Know?
+                    </p>
+                </div>
+
+                <!--Album Track list-->
+                <div class="product-tracklist">
+                    <h2>TRACKLIST.</h2>
+
+                    <ol id="product-tracks">
+                        <li>Do I Wanna Know?</li>
+                        <li>R U Mine?</li>
+                        <li>One for the Road</li>
+                        <li>Arabella</li>
+                        <li>I Want It All</li>
+                        <li>No. 1 Party Anthem</li>
+                        <li>Mad Sounds</li>
+                        <li>Fireside</li>
+                        <li>Why'd You Only Call Me When You're High?</li>
+                        <li>Snap Out of It</li>
+                        <li>Knee Socks</li>
+                        <li>I Wanna Be Yours</li>
+                    </ol>
+                </div>
+            </section>
+        </main>
+
+        <!--Footer-->
+        <footer> 
+            <h2>OFFBEAT.</h2>
+            <p>Feel the music. Own the vinyl.</p>
+            <p>&copy; 2026 OFFBEAT. All Rights Reserved.</p>
+        </footer>
+
+
+    <!-- Product Database -->
+    <script src="js/products.js"></script>
+
+    <!-- Product Details Functionality -->
+    <script src="js/product.js"></script>
+
+    </body>
+</html>

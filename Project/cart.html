@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | OFFBEAT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/website/website-icon.png">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <h1>OFFBEAT.</h1>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="login.html">LOGIN</a>
+            <a href="cart.html">CART</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-page">
+
+            <!-- CONTINUE SHOPPING -->
+            <a href="shop.html" class="back-button">
+                &#8592; CONTINUE SHOPPING
+            </a>
+
+            <!-- CART HEADING -->
+            <h1 class="cart-title">YOUR CART.</h1>
+            <p class="cart-count" id="cart-count">
+                2 records in your cart
+            </p>
+
+            <!-- CART TWO-COLUMN LAYOUT -->
+            <div class="cart-layout">
+
+                <!-- LEFT: SCROLLABLE CART LIST -->
+                <div class="cart-left">
+
+                    <div class="cart-list" id="cart-items"></div>
+
+                    <!-- EMPTY CART MESSAGE -->
+                    <div class="empty-cart" id="empty-cart" hidden>
+                        <h2>YOUR CART IS EMPTY.</h2>
+                        <p>Time to find your next favourite record.</p>
+                        <a href="shop.html">EXPLORE RECORDS</a>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT: ORDER SUMMARY -->
+                <aside class="cart-right">
+
+                    <div class="order-summary">
+
+                        <h2>ORDER SUMMARY</h2>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">RM 258.00</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>Calculated later</span>
+                        </div>
+
+                        <hr>
+
+                        <div class="summary-row summary-total">
+                            <span>TOTAL</span>
+                            <span id="cart-total">RM 258.00</span>
+                        </div>
+
+                        <button type="button"
+                                id="checkout-btn"
+                                class="checkout-btn">
+                            CHECKOUT &#8594;
+                        </button>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- CHECKOUT DEMONSTRATION MESSAGE -->
+    <div class="checkout-modal" id="checkout-modal" hidden>
+
+        <div class="checkout-modal-content">
+            <h2>THANK YOU FOR SHOPPING WITH OFFBEAT!</h2>
+
+            <p>
+                This is a demonstration checkout for an
+                academic project. No actual payment or
+                purchase has been processed.
+            </p>
+
+            <button type="button" id="close-checkout">
+                CLOSE
+            </button>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>OFFBEAT.</h2>
+        <p>Feel the music. Own the vinyl.</p>
+        <p>&copy; 2026 OFFBEAT. All Rights Reserved.</p>
+    </footer>
+
+
+    
+    <!-- Product Database -->
+    <script src="js/products.js"></script>
+
+    <!-- Shopping Cart Functionality -->
+    <script src="js/cart.js"></script>
+
+</body>
+</html>
