@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register | OFFBEAT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/website/website-icon.png">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <h1>OFFBEAT.</h1>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="login.html">LOGIN</a>
+            <a href="cart.html">CART</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- LOGIN / REGISTER SECTION -->
+        <section class="login-page">
+
+            <div class="login-layout">
+
+                <!-- LEFT: OFFBEAT BRANDING -->
+                <div class="login-branding">
+
+                    <h1>WELCOME TO OFFBEAT.</h1>
+
+                    <h2>YOUR MUSIC. YOUR COLLECTION.</h2>
+
+                    <img src="images/website/hero-sec.png"
+                         alt="Vinyl record artwork">
+
+                    <p>
+                        Discover records. Find your sound.
+                    </p>
+
+                </div>
+
+                <!-- RIGHT: LOGIN / REGISTER FORM -->
+                <div class="login-container">
+
+                    <h2 id="form-heading">WELCOME BACK.</h2>
+
+                    <p class="login-subtitle" id="form-subtitle">
+                        Log in to your account.
+                    </p>
+
+                    <!-- LOGIN / REGISTER SWITCH -->
+                    <div class="auth-tabs">
+
+                        <button type="button"
+                                id="login-tab"
+                                class="auth-tab active">
+                            LOGIN
+                        </button>
+
+                        <button type="button"
+                                id="register-tab"
+                                class="auth-tab">
+                            REGISTER
+                        </button>
+
+                    </div>
+
+                    <!-- AUTHENTICATION FORM -->
+                    <form id="auth-form">
+
+                        <!-- FULL NAME (REGISTER ONLY) -->
+                        <div class="form-group" id="name-group" hidden>
+                            <label for="full-name">Full Name</label>
+
+                            <input type="text"
+                                   id="full-name"
+                                   name="full-name"
+                                   placeholder="Enter your full name">
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+                            <label for="auth-email">Email Address</label>
+
+                            <input type="email"
+                                   id="auth-email"
+                                   name="email"
+                                   placeholder="example@email.com"
+                                   autocomplete="email"
+                                   required>
+                        </div>
+
+                        <!-- PASSWORD -->
+                        <div class="form-group">
+                            <label for="auth-password">Password</label>
+
+                            <input type="password"
+                                   id="auth-password"
+                                   name="password"
+                                   placeholder="Enter your password"
+                                   autocomplete="current-password"
+                                   minlength="6"
+                                   required>
+                        </div>
+
+                        <!-- SHOW PASSWORD -->
+                        <div class="show-password">
+                            <input type="checkbox" id="show-password">
+                            <label for="show-password">Show password</label>
+                        </div>
+
+                        <!-- CONFIRM PASSWORD (REGISTER ONLY) -->
+                        <div class="form-group" id="confirm-group" hidden>
+                            <label for="confirm-password">
+                                Confirm Password
+                            </label>
+
+                            <input type="password"
+                                   id="confirm-password"
+                                   name="confirm-password"
+                                   placeholder="Confirm your password"
+                                   autocomplete="new-password">
+                        </div>
+
+                        <!-- SUBMIT BUTTON -->
+                        <button type="submit"
+                                class="auth-submit"
+                                id="auth-submit">
+                            LOGIN &#8594;
+                        </button>
+
+                    </form>
+
+                    <!-- FORM FEEDBACK -->
+                    <p class="auth-feedback"
+                       id="auth-feedback"
+                       role="status"
+                       aria-live="polite"
+                       hidden>
+                    </p>
+
+                    <p class="auth-footer-text">
+                        OFFBEAT — Feel the music. Own the vinyl.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>OFFBEAT.</h2>
+        <p>Feel the music. Own the vinyl.</p>
+        <p>&copy; 2026 OFFBEAT. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
