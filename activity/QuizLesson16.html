@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form - Text Input</title>
+        <link rel=icon href=vaananjk.jpg type=image/jpg>
+        <meta name=viewport content=width=device-width, initial-scale=1.0>
+
+
+        <style>
+            .question {
+                border: 2px solid black;
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .question-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                margin-top: 20px;
+                align-items: start;
+            }
+
+            .answer {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .answer label {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .answer input[type="radio"], .answer input[type="checkbox"] {
+                margin: 0;
+            }
+
+            .personal-details {
+                border: 2px solid black;
+                padding: 20px;
+            }
+
+            .personal-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                margin-top: 25px;
+            }
+            
+            .details-column {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .details-row {
+                display: grid;
+                grid-template-columns: 130px 15px 210px;
+                align-items: center;
+            }
+
+            .details-row label{
+                font-weight: bold;
+            }
+
+            .details-row input, 
+            .details-row select {
+                width: 100%;
+                box-sizing: border-box;
+                height: 30px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function validationForm(){
+                //Personal Details 
+                let studentID = document.getElementById("student_id").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let course = document.getElementById("course").value.trim();
+                let studentName = document.getElementById("student_name").value.trim();
+                let icNo = document.getElementById("ic_no").value.trim();
+                let dob = document.getElementById("dob").value;
+                let suggestion = document.getElementById("q4").value.trim();
+
+                //validate Student ID - cannot be empty
+                if (studentID === "") {
+                    alert("Please enter your Student ID.");
+                    return false;
+                }
+
+                //validate email - cannot be empty 
+                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)){
+                    alert ("Please enter a valid email address.");
+                    return false;
+                }
+
+                //Validate Student Name - cannot be empty
+                if (studentName === "") {
+                    alert("Please enter your Student Name.");
+                    return false;
+                }
+
+                //Validate IC No. - cannot be empty
+                let icPattern = /^[0-9]{12}$/;
+                if (!icPattern.test(icNo)) {
+                    alert("Please enter a valid IC No. (12 digits).");
+                    return false;
+                }
+
+                //validate Course 
+                if(course === ""){
+                    alert("Please select a course.");
+                    return false;
+                }
+
+                //validate  D.O.B - cannot be empty
+                if (dob === "") {
+                    alert("Please select your Date of Birth.");
+                    return false;
+                }
+
+                //validate Question 1 - select 1
+                let q1 = document.querySelector('input[name="q1"]:checked');
+                if (q1 === null){
+                    alert("Please answer Question 1.");
+                    return false;
+                }
+
+                //validate Question 2 - select 1
+                let q2 = document.querySelector('input[name="q2"]:checked');
+                if (q2 === null){
+                    alert("Please answer Question 2.");
+                    return false;
+                }
+
+                //validate Question 3 - select 1
+                let q3 = document.querySelector('input[name="q3"]:checked');
+                if (q3.length === 0){
+                    alert("Please select at least one option answer for Question 3.");
+                    return false;
+                }
+                
+                //Validate Question 4 - cannot be empty
+                if (suggestion === "") {
+                    alert("Please provide your suggestion for Question 4.");
+                    return false;
+                }
+
+                //If all validations pass, return true to submit the form
+                alert("Survey submitted successfully");
+                return true;
+
+            }
+        </script>
+    </head>
+    <body style="margin-left:100px; margin-right:100px; border:2px solid black; padding:20px;">
+        <header style="margin-bottom: 30px;">
+            <h1 align="center"><b>DCS3003 Website Design Course Survey</b></h1>
+        </header>
+
+        <form id="survey" onsubmit="return validationForm()" novalidate>
+        <main style="border:2px solid black; padding:20px;" class="personal-details">
+            <div style="color:blue; text-decoration: underline;">
+                    Personal Details
+            </div>
+            <div class="personal-grid">
+                <div class="details-column">
+                    <div class="details-row">
+                        <label for="student_id">Student ID:</label>
+                        <span>:</span>
+                        <input type="text" id="student_id" name="student_id">
+                    </div>
+
+                    <div class="details-row">
+                        <label for="email">Email Address:</label>
+                        <span>:</span>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div class="details-row">
+                        <label for="course">Course</label>
+                        <span>:</span>
+                        <select id="course" name="course">
+                            <option value="">- List of Courses -</option>
+                            <option value="DCS3003">DCS3003</option>
+                            <option value="DCS2203">DCS2203</option>
+                            <option value="DCS3001">DCS3001</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="details-column">
+                    <div class="details-row">
+                        <label for="student_name">Student Name</label>
+                        <span>:</span>
+                        <input type="text" id="student_name" name="student_name">
+                    </div>
+
+                    <div class="details-row">
+                        <label for="ic_no">IC No.</label>
+                        <span>:</span>
+                        <input type="text" id="ic_no" name="ic_no">
+                    </div>
+
+                    <div class="details-row">
+                        <label for="dob">D.O.B</label>
+                        <span>:</span>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        
+        <section class="question">
+            <div style="color:blue; text-decoration: underline;">
+                Questions
+            </div>
+            <div style="color:red; font-weight: bold;">
+                Please answer all question
+            </div>
+            <div class="question-row">
+                <div>
+                    1) Have you grasped the content of the Webite Design so far?
+                </div>
+                    <div class="answer">
+                        <label>
+                            <input type="radio" name="q1" value="yes"> Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="no"> No
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="question-row">
+                <div>
+                    2) Can you now create a simple but interactive website?
+                </div>
+                    <div class="answer">
+                        <label>
+                            <input type="radio" name="q2" value="yes"> Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="no"> No
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="question-row">
+                <div>
+                    3) What have you learned so far?
+                </div>
+                    <div class="answer">
+                        <label>
+                            <input type="checkbox" name="q3" value="knowledge"> Knowledge
+                        </label>
+                        <label>
+                            <input type="checkbox" name="q3" value="skills"> Practical Skills
+                        </label>
+                        <label>
+                            <input type="checkbox" name="q3" value="problem_solving"> Problem Solving
+                        </label>
+                        <label>
+                            <input type="checkbox" name="q3" value="self_exploration"> Self-Exploration Skills
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="margin-top: 10px;">
+                    4) Wish Item/ sugestion:
+                    <span style="color: red;">*</span>
+                </div>
+                    <div>
+                        <input type="text" id="q4" name="q4" style="height: 50px; width: 100%; margin-top:10px;">
+                    </div>
+                </div>  
+        
+        </section>
+
+        <section align="center" style="margin-top: 20px;">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </section>
+        </form>
+    </body>
+</html>
