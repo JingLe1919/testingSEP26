@@ -129,8 +129,39 @@ genreButtons.forEach(function(button) {
     });
 });
 
-// Select ALL by default
-genreButtons[0].classList.add("active");
 
-// Display albums when the page loads
+/* =====================================
+   SELECT GENRE FROM HOMEPAGE
+===================================== */
+
+// Get genre from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const genreFromURL = urlParams.get("genre");
+
+// Check whether a genre was selected
+if (genreFromURL) {
+
+    // Convert genre name to uppercase
+    const requestedGenre = genreFromURL.toUpperCase();
+
+    // Find the matching genre button
+    const matchingButton = Array.from(genreButtons).find(function(button) {
+        return button.textContent.trim().toUpperCase() === requestedGenre;
+    });
+
+    // Select the genre if it exists
+    if (matchingButton) {
+        selectedGenre = requestedGenre;
+        matchingButton.classList.add("active");
+    } else {
+        genreButtons[0].classList.add("active");
+    }
+
+} else {
+    // Show all records when no genre is specified
+    genreButtons[0].classList.add("active");
+}
+
+// Display the filtered albums
 updateShop();
+
