@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript - Keyboard Events</title>
+        <rel rel="icon" href="vaananjk.jpg" type="image/jpg">
+        <meta name=viewport content=width=device-width, inital-scale=1.0>
+        <script>
+            window.addEventListener("keydown", checkKeyDown, false);
+
+            function checkKeyDown(event){
+                alert("keyCode=" + event.keyCode +", key =" + event.key)
+
+                if (key.keyCode == "AarowLeft"){
+                    alert("The Arrow Left has been pressed!")
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>
+            Keybaord Event - KeyDown in JavaScript
+        </h1>
+
+        <p>
+            keyCode : ArrowLeft = an arrow left key on keyboard
+        </p>
+    </body>
+</html>
