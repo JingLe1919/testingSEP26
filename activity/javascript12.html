@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+<link rel="icon" href="sunflower.jpg" type="image/jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+function checknumber(){
+var maxnumber = Number(document.getElementById("maxnumber").value);
+var minnumber = Number(document.getElementById("minnumber").value);
+
+for (var i = minnumber; i <= maxnumber; i++)
+{
+document.write("using i++ : ");
+document.write(i + "<br>");
+}
+
+document.write("<br><br>");
+
+for (var i = maxnumber; i >= minnumber; i--)
+{
+document.write("using i-- : ");
+document.write(i + "<br>");
+}
+
+return false;
+}
+</script>
+</head>
+<body>
+<h1>This is an example of using JavaScript - Loops in HTML.</h1>
+<form name="myjava" onsubmit="return checknumber()">
+Insert a max number:
+<input type="number" name="maxnumber" id="maxnumber">
+<br><br>
+Insert a min number:
+<input type="number" name="minnumber" id="minnumber">
+<br><br
+<input type="submit" name="submit" value="Submit">
+</form>
+</body>
+</html>

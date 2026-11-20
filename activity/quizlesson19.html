@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>
+            Result Calculator
+        </title>
+    </head>
+    <body>
+        <h1>Result Calculator</h1>
+        <br>
+        <h4>Enter your marks for each type</h4>
+        <br>
+        <table border="double">
+            <tr>
+                <td style="padding-right: 200px;" align="left"> Type</td>
+                <td style="padding-right: 150px" align="left">Weight</td>
+                <td style="padding-right: 300px" align="left">Marks</td>
+            </tr>
+            <tr align=left>
+                <td>Assesment 1</td>
+                <td>50%</td>
+                <td><input type="text" id="mark1"></td>
+            </tr>
+            <tr align=left>
+                <td>Assesment 2</td>
+                <td>50%</td>
+                <td><input type="text" id="mark2"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">Total Marks</td>
+                <td id="total"></td>
+            </tr>
+            <tr>
+                <td colspan="2" algin="center">Pass/Fail</td>
+                <td id="porf"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" id="calculate" value="Calculate">
+        <script>
+            function calculateResult(){
+                var mark1 = parseFloat (document.getElementById("mark1").value);
+                var mark2 = parseFloat (document.getElementById("mark2").value);
+
+                var totalmark = (mark1 + mark2);
+
+                document.getElementById("total").innerHTML = totalmark;
+
+                if (total < 50){
+                    document.getElementById("porf").innerHTML = "Fail";
+                } else {
+                    document.getElementById("porf").innerHTML = "Pass";
+                }
+            }
+
+            document.getElementById("calculate").onclick = calculateResult;
+        </script>
+    </body>
+</html>
